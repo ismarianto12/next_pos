@@ -4,11 +4,11 @@ const Pheader = () => {
     const route = useRouter()
     const logout = () => {
         console.log('login')
-        // route.push('login')
+         
     }
-    return (<>
+    return ( 
 
-       
+       <div> 
         <div id="kt_header_mobile" className="header-mobile align-items-center header-mobile-fixed">
 
             <a href="index.html">
@@ -44,7 +44,7 @@ const Pheader = () => {
             </div>
             {/*end::Toolbar*/}
         </div>
-        {/*end::Header Mobile*/}
+       
         <div className="d-flex flex-column flex-root">
             {/*begin::Page*/}
             <div className="d-flex flex-row flex-column-fluid page">
@@ -7963,7 +7963,8 @@ const Pheader = () => {
             </div>
             {/*end::Page*/}
         </div>
-    </>)
+        </div>
+    )
      
 }
 

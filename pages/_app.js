@@ -14,11 +14,7 @@ import { store } from '../store/app'
 import { useRouter } from "next/router";
 import { useEffect } from 'react'
 import NextNProgress from "nextjs-progressbar";
-
-import 'react-perfect-scrollbar/dist/css/styles.css';
-import PerfectScrollbar from 'react-perfect-scrollbar'
-
-
+  
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -31,9 +27,9 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
 
       <NextNProgress color="#ef034f" />
-      <PerfectScrollbar>
+      
         <Component {...pageProps} router={router} />
-      </PerfectScrollbar>
+       
     </Provider>
   )
 }

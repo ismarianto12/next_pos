@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Pheader from './header'
+import Pheader from './pheader'
 import Sidebar from './sidebar'
 import { useRouter } from 'next/router'
 import Swal from 'sweetalert2'
