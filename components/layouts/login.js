@@ -27,9 +27,7 @@ const Login = ({
                     <meta name="description" content="Login page example" />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 </Head>
-                {/*end::Head*/}
-                {/*begin::Body*/}
-                {/*begin::Main*/}
+               
                 <div className="d-flex flex-column flex-root" style={{
                     'height': 'calc(101vh - 10px)',
                     'overflow-y': 'hidden'
