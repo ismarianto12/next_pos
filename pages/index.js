@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
-// import Login from 'l'
 import Login from '../components/layouts/login'
 import { useRouter } from "next/router";
 
