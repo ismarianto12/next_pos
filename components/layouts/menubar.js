@@ -18,23 +18,17 @@ class MenuBar extends React.Component {
         };
 
     }
-    state = {};
 
     handleClick(item) {
 
-        // const style = {
-        //     marginRight: 10,
-        //     color: this.state.loc.asPath === href ? 'red' : 'black',
-        // } 
-        // console.log(style)
         this.setState(prevState => ({ [item]: !prevState[item] }))
     }
 
 
     handler = children => {
+        let ind = 1;
         const { state } = this;
         // const style = subOption.children ? '' : 'background:red';
-
         return children.map((subOption, ind) => {
             // if (typeof subOption.group !== 'undefined') {
             //     //    const style = true;
@@ -58,14 +52,12 @@ class MenuBar extends React.Component {
                                 aria-haspopup="true"
                                 style={{ 'background': 'rgb(102 102 102)' }}
                             >
-                                <Link className="menu-link" href={`${subOption.url}`}>
-
-
+                                <Link className="menu-link" href={`${subOption.url}`}> 
                                     <a href="#" className={"menu-link"}>
                                         <span className="svg-icon menu-icon">
                                             {subOption.icon}
                                         </span>
-                                        <span className="menu-text"> {subOption.name}</span>
+                                        <span className="menu-text">&nbsp;{subOption.name}</span>
                                     </a>
 
 
@@ -89,7 +81,7 @@ class MenuBar extends React.Component {
                                         <span className="svg-icon menu-icon">
                                             {subOption.icon}
                                         </span>
-                                        <span className="menu-text">  {subOption.name}</span>
+                                        <span className="menu-text">&nbsp;{subOption.name}</span>
                                     </a>
 
 
@@ -118,10 +110,8 @@ class MenuBar extends React.Component {
                         <i className="menu-bullet menu-bullet-dot">
                             {subOption.icon}
                         </i>
-                        <span className="menu-text">{subOption.name}</span>
-
-                        {state[subOption.name] ?  <Icon.ArrowDown /> :  <Icon.ArrowRight />}
-                        
+                        <span className="menu-text">&nbsp;&nbsp;&nbsp;{subOption.name}</span>
+                        <Icon.ArrowRight />
                     </a>
                     <div className="menu-submenu">
 
@@ -133,6 +123,7 @@ class MenuBar extends React.Component {
                     </div>
                 </li>
             );
+            ind++
         });
     };
 
