@@ -1,7 +1,7 @@
 import { Modal, Button } from 'react-bootstrap'
 import * as Icon from 'react-feather'
 
-export const PencarianBarang = ({ show, hide, data }) => {
+export const Pencarianbarang = ({ show, hide, data }) => {
     return (<>
         <Modal
             show={show}
