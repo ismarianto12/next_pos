@@ -30,7 +30,7 @@ const Login = ({
                 {/*end::Head*/}
                 {/*begin::Body*/}
                 {/*begin::Main*/}
-                <div className="d-flex flex-column flex-root" layout="responsive" objectFit="contain" style={{
+                <div className="d-flex flex-column flex-root" style={{
                     'height': 'calc(101vh - 10px)',
                     'overflow-y': 'hidden'
                 }}>
