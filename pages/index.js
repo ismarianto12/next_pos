@@ -4,8 +4,7 @@ import { useState } from 'react'
 import Login from '../components/layouts/login'
 import { useRouter } from "next/router";
 
-export default function Home() {
-
+export default function Index() { 
   const route = useRouter()
 
   const [value, setValue] = useState({
