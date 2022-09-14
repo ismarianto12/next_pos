@@ -9,12 +9,12 @@ import '../styles/css/style.bundle.css'
 import '../styles/css/dark.css'
 import '../styles/css/dark.css'
 
-import { connect, Provider } from "react-redux"
-import { store } from '../store/app'
+// import { connect, Provider } from "react-redux"
+// import { store } from '../store/app'
 import { useRouter } from "next/router";
 import { useEffect } from 'react'
 import NextNProgress from "nextjs-progressbar";
-  
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -24,13 +24,11 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Provider store={store}>
-
+    <> 
       <NextNProgress color="#ef034f" />
-      
-        <Component {...pageProps} router={router} />
-       
-    </Provider>
+      <Component {...pageProps} router={router} />
+    </>
+
   )
 }
 
