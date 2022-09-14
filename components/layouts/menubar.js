@@ -4,20 +4,7 @@ import Link from "next/link"
 import * as Icon from 'react-feather'
 import { useRouter } from "next/router";
 
-class MenuBar extends React.Component {
-
-    constructor(props) {
-        super(props)
-
-        //   console.log(props.router.query.loc)
-
-        this.state = {
-            group: false,
-            // loc: props.router.query.loc,
-            loaded: false
-        };
-
-    }
+class MenuBar extends React.Component { 
 
     handleClick(item) {
 
@@ -102,6 +89,7 @@ class MenuBar extends React.Component {
                     aria-haspopup="true"
                     data-menu-toggle="hover"
                     onClick={() => this.handleClick(subOption.name)}
+                    key={ind}
                 >
                     <a
                         className="menu-link menu-toggle"
