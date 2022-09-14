@@ -1,7 +1,7 @@
 import { Modal, Button } from 'react-bootstrap'
 import { useState } from 'react'
 import * as Icon from 'react-feather'
-import { PencarianBarang } from './PencarianBarang'
+import { PencarianBarang } from './pencarianbarang'
 
 const Cpenjualan = () => {
 
