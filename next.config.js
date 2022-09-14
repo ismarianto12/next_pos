@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  ignoreBuildErrors: true,
+  ignoreDuringBuilds: true
 }
 
 module.exports = nextConfig
