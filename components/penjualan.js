@@ -1,8 +1,7 @@
 import { Modal, Button } from 'react-bootstrap'
 import { useState } from 'react'
-import * as Icon from 'react-feather'
-import { Pencarianbarang } from './pencarianbarang'
-// import {Pencarianbarang}
+import * as Icon from 'react-feather' 
+ 
 
 const Cpenjualan = () => {
 
@@ -12,7 +11,7 @@ const Cpenjualan = () => {
     return (
         <>
 
-            <Pencarianbarang show={show} hide={() => { setShow(false) }} />
+            
             <br />
             <div className="container">
                 <div className="row __penjualan">
