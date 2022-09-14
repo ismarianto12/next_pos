@@ -1,8 +1,6 @@
-import Head from "next/head" 
-import Card from 'react-bootstrap/Card';
+import Head from "next/head"  
 import Cpenjualan from "../components/penjualan";
-import { useState } from "react";
-import { PencarianBarang } from "../components/PencarianBarang";
+import { useState } from "react"; 
 import Templates from "../components/layouts/templates";
 
 
