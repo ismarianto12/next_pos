@@ -4,14 +4,15 @@ import Link from "next/link"
 import * as Icon from 'react-feather'
 import { useRouter } from "next/router";
 
-class MenuBar extends React.Component { 
+class MenuBar extends React.Component {
 
     handleClick(item) {
 
         this.setState(prevState => ({ [item]: !prevState[item] }))
     }
 
-
+    state = {}
+    
     handler = children => {
         let ind = 1;
         const { state } = this;
@@ -39,7 +40,7 @@ class MenuBar extends React.Component {
                                 aria-haspopup="true"
                                 style={{ 'background': 'rgb(102 102 102)' }}
                             >
-                                <Link className="menu-link" href={`${subOption.url}`}> 
+                                <Link className="menu-link" href={`${subOption.url}`}>
                                     <a href="#" className={"menu-link"}>
                                         <span className="svg-icon menu-icon">
                                             {subOption.icon}
