@@ -65,7 +65,7 @@ class MenuBar extends React.Component {
                                         <span className="svg-icon menu-icon">
                                             {subOption.icon}
                                         </span>
-                                        <span className="menu-text">&nbsp;{subOption.name}</span>
+                                        <span className="menu-text"> {subOption.name}</span>
                                     </a>
 
 
@@ -89,7 +89,7 @@ class MenuBar extends React.Component {
                                         <span className="svg-icon menu-icon">
                                             {subOption.icon}
                                         </span>
-                                        <span className="menu-text">&nbsp;{subOption.name}</span>
+                                        <span className="menu-text">  {subOption.name}</span>
                                     </a>
 
 
@@ -118,7 +118,7 @@ class MenuBar extends React.Component {
                         <i className="menu-bullet menu-bullet-dot">
                             {subOption.icon}
                         </i>
-                        <span className="menu-text">&nbsp;&nbsp;&nbsp;{subOption.name}</span>
+                        <span className="menu-text">{subOption.name}</span>
 
                         {state[subOption.name] ?  <Icon.ArrowDown /> :  <Icon.ArrowRight />}
                         

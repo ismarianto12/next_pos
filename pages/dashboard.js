@@ -91,62 +91,61 @@ const Dashboard = () => {
     });
 
     return (<Templates container={
-
-        <>
+        <div>
             <Head>
                 <title>Dashboard</title>
             </Head>
-            <>
-                <div className="row" style={{ 'background': '#fff', 'margin-top': '12px' }}>
+
+            <div className="row" style={{ 'background': '#fff', 'margin-top': '12px' }}>
+                <br /> <br />
+                <div className="col-md-6">
                     <br /> <br />
-                    <div className="col-md-6">
-                        <br /> <br />
-                        <h4><Icon.List /> Statistik Penjualan</h4>
-                        <canvas id="myChart" width="auto" height="155"></canvas>
-
-                    </div>
-                    <div className="col-md-6">
-                        <br /> <br />
-                        <h4><Icon.BarChart2 /> Barang Dan stok</h4>
-
-                        <canvas id="Bar" width="auto" height="140"></canvas>
-
-                    </div>
-
                     <h4><Icon.List /> Statistik Penjualan</h4>
-                    <br /> <br />
-                    <div className='clearfix'></div>
-                    {[
-                        'Primary',
-                        'Secondary',
-                        'Success',
-                        'Danger',
-                        'Warning',
-                        'Info',
+                    <canvas id="myChart" width="auto" height="155"></canvas>
 
-                    ].map((variant) => (
-                        <div className="col-md-4">
-                            <Card
-                                bg={variant.toLowerCase()}
-                                key={variant}
-                                text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                                style={{ width: '18rem' }}
-                                className="mb-3"
-                            >
-                                <Card.Header>Header</Card.Header>
-                                <Card.Body>
-                                    <Card.Title>{variant} Card Title </Card.Title>
-                                    <Card.Text>
-                                        Some quick example text to build on the card title and make up the
-                                        bulk of the card's content.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    ))}
                 </div>
-            </>
-        </>
+                <div className="col-md-6">
+                    <br /> <br />
+                    <h4><Icon.BarChart2 /> Barang Dan stok</h4>
+
+                    <canvas id="Bar" width="auto" height="140"></canvas>
+
+                </div>
+
+                <h4><Icon.List /> Statistik Penjualan</h4>
+                <br /> <br />
+                <div className='clearfix'></div>
+                {[
+                    'Primary',
+                    'Secondary',
+                    'Success',
+                    'Danger',
+                    'Warning',
+                    'Info',
+
+                ].map((variant) => (
+                    <div className="col-md-4">
+                        <Card
+                            bg={variant.toLowerCase()}
+                            key={variant}
+                            text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                            style={{ width: '18rem' }}
+                            className="mb-3"
+                        >
+                            <Card.Header>Header</Card.Header>
+                            <Card.Body>
+                                <Card.Title>{variant} Card Title </Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                ))}
+
+            </div>
+        </div>
 
     } />)
 }
