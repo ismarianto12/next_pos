@@ -115,7 +115,7 @@ const Dashboard = () => {
                 <h4><Icon.List /> Statistik Penjualan</h4>
                 <br /> <br />
                 <div className='clearfix'></div>
-                {/* {[
+                {[
                     'Primary',
                     'Secondary',
                     'Success',
@@ -136,12 +136,12 @@ const Dashboard = () => {
                             <Card.Body>
                                 <Card.Title>{variant} Card Title </Card.Title>
                                 <Card.Text>
-                                   Test
+                                    Test
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </div>
-                ))} */}
+                ))}
 
             </div>
         </div>

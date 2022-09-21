@@ -7,13 +7,48 @@ import { useRouter } from 'next/router'
 import Swal from 'sweetalert2'
 import * as Icon from 'react-feather'
 import App from '../app'
-
+import LogoAPP from '../../public/img/icon.png'
 
 const Templates = ({ container }) => {
     const username = useContext(App)
     const [nama, setNama] = useState('')
+    const [clasbody, setClasbody] = useState(false);
     useEffect(() => {
         const session = typeof window != localStorage.getItem('username') ? localStorage.getItem('username') : null
+        // const div = document.querySelector('body').classList.remove("aside-fixed", "aside-minimize")
+        // document.querySelector("body").classList.add("aside-minimize-hoverable", "aside-fixed");
+        document.querySelector("body").classList.add('aside-minimize-hoverable', 'aside-fixed')
+        document.getElementById('kt_brand').addEventListener('click', function () {
+            setClasbody(true)
+            console.log(clasbody)
+
+            console.log(document.querySelector("body").classList[0]);
+
+            if (document.querySelector("body").classList[0] === 'aside-minimize') {
+
+                document.querySelector("body").classList.remove('aside-minimize')
+                document.querySelector("body").classList.remove('aside-fixed')
+
+                document.querySelector("body").classList.add('aside-minimize-hoverable', 'aside-fixed')
+
+            } else {
+
+                // if (document.querySelector("body").classList[0] === 'aside-minimize-hoverable') {
+                document.querySelector("body").classList.remove('aside-minimize-hoverable')
+                document.querySelector("body").classList.remove('aside-fixed')
+
+                document.querySelector("body").classList.add('aside-minimize', 'aside-fixed')
+            }
+
+
+
+            // document.querySelector("body").classList.remove('aside-minimize-hoverable')
+            // document.querySelector("body").classList.remove('aside-fixed')
+            // clasbody ?  document.querySelector("body").classList.add("aside-minimize-hoverable", "aside-fixed") : document.querySelector("body").classList.add("aside-fixed", "aside-minimize") 
+            // clasbody ? document.querySelector("body").classList.add("aside-fixed", "aside-minimize") : document.querySelector("body").classList.add("aside-minimize-hoverable", "aside-fixed");
+
+        });
+
         setNama(session)
         console.log(username)
     }, [])
@@ -83,17 +118,12 @@ const Templates = ({ container }) => {
             {/*begin::Page*/}
             <div className="d-flex flex-row flex-column-fluid page">
                 {/*begin::Aside*/}
-                <div className="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+                <div className="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside" style={{ 'overflow': 'auto' }}>
                     {/*begin::Brand*/}
-                    <div className="brand flex-column-auto" id="kt_brand" style={{ 'background': '#fff' }} >
-                        {/*begin::Logo*/}
-                        <a href="index.html" className="brand-logo">
-                            {/* <img alt="Logo" src="http://localhost:97/pi_kpi/public/assets/img/logo.png" /> */}
-                            <img alt="Logo" src="http://localhost:97/pi_kpi/public/assets/img/logo.png" style={{ 'width': '50%' }} />
-
+                    <div className="brand flex-column-auto" id="kt_brand">
+                        <a href="#" className="brand-logo">
+                            <Image alt="Logo" src={LogoAPP} width={70} height={60} />
                         </a>
-                        {/*end::Logo*/}
-                        {/*begin::Toggle*/}
                         <button className="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
                             <span className="svg-icon svg-icon svg-icon-xl">
                                 {/*begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg*/}
@@ -122,6 +152,7 @@ const Templates = ({ container }) => {
                 {/*begin::Wrapper*/}
                 <div className="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
                     {/*begin::Header*/}
+
                     <div id="kt_header" className="header header-fixed">
                         {/*begin::Container*/}
                         <div className="container-fluid d-flex align-items-stretch justify-content-between">
@@ -151,13 +182,10 @@ const Templates = ({ container }) => {
                         </div>
                         {/*end::Container*/}
                     </div>
+
                     {/*end::Header*/}
                     {/*begin::Content*/}
                     <div className="content d-flex flex-column flex-column-fluid" id="kt_content">
-                        {/*begin::Subheader*/}
-
-                        {/*end::Subheader*/}
-                        {/*begin::Entry*/}
                         <div className="d-flex flex-column-fluid">
                             {/*begin::Container*/}
                             <div className="container" style={{ 'margin-top': '40px' }}>

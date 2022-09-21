@@ -12,7 +12,7 @@ class MenuBar extends React.Component {
     }
 
     state = {}
-    
+
     handler = children => {
         let ind = 1;
         const { state } = this;
@@ -47,9 +47,6 @@ class MenuBar extends React.Component {
                                         </span>
                                         <span className="menu-text">&nbsp;{subOption.name}</span>
                                     </a>
-
-
-
                                 </Link>
                             </li>
 
@@ -71,8 +68,6 @@ class MenuBar extends React.Component {
                                         </span>
                                         <span className="menu-text">&nbsp;{subOption.name}</span>
                                     </a>
-
-
 
                                 </Link>
                             </li>
@@ -100,7 +95,7 @@ class MenuBar extends React.Component {
                             {subOption.icon}
                         </i>
                         <span className="menu-text">&nbsp;&nbsp;&nbsp;{subOption.name}</span>
-                        <Icon.ArrowRight />
+                        {state[subOption.name] ? <Icon.ArrowDown /> : <Icon.ArrowRight />}
                     </a>
                     <div className="menu-submenu">
 

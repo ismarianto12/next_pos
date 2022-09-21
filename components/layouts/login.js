@@ -21,7 +21,7 @@ const Login = ({
 
     return (
         <>
-            <Container style={{ paddingTop: 0 }} >
+            <Container style={{ paddingTop: 0 }}>
                 <Head>
                     <title>Login App</title>
                     <meta name="description" content="Login page example" />
