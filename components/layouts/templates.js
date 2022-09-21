@@ -28,12 +28,9 @@ const Templates = ({ container }) => {
 
                 document.querySelector("body").classList.remove('aside-minimize')
                 document.querySelector("body").classList.remove('aside-fixed')
-
                 document.querySelector("body").classList.add('aside-minimize-hoverable', 'aside-fixed')
 
-            } else {
-
-                // if (document.querySelector("body").classList[0] === 'aside-minimize-hoverable') {
+            } else if (document.querySelector("body").classList[0] === 'aside-minimize-hoverable') {
                 document.querySelector("body").classList.remove('aside-minimize-hoverable')
                 document.querySelector("body").classList.remove('aside-fixed')
 

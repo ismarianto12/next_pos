@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import { Listmodal, Table } from '../components/list'
 import Template from '../components/template/template'
@@ -6,6 +6,7 @@ import * as Icon from 'react-feather'
 import Head from 'next/head'
 import Templates from '../components/layouts/templates'
 import styled from 'styled-components'
+import Swal from 'sweetalert2'
 
 const Barang = () => {
     const [show, setShow] = useState(false)
@@ -22,6 +23,12 @@ const Barang = () => {
     const requestClose = () => {
         setShow(false)
     }
+
+    useEffect(() => {
+        document.getElementsByClassName('.Cari_data').addEventListener('click', function () {
+            Swal.fire('info','tes','info');
+        });
+    }, []);
 
     const handlechange = (e) => {
         setValue({
@@ -48,6 +55,10 @@ const Barang = () => {
                         'margin-bottom': '12px'
                     }}>
                         <Icon.Plus /> Tambah data Barang
+                    </Button>
+
+                    <Button className="Cari_data">
+                        <Icon.Search /> Pilih Existing
                     </Button>
 
                 </Container>
